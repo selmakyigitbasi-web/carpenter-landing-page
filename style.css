@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+  background-color: #f3f0e6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+header {
+  background-color: #f4d5ae;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav .menu li {
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+nav .menu li:hover {
+  background-color: #f6b463;
+  border-radius: 5px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.hero-text {
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+  border-top: 3px solid #f6b463;
+  border-bottom: 3px solid #f6b463;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+}
+.hero-text .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #f4d5ae;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.hero-text .btn:hover {
+  background-color: #f6b463;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service {
+  perspective: 1000px;
+  cursor: pointer;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.service.active .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-top: 3px solid #f6b463;
+  border-bottom: 3px solid #f6b463;
+}
+.card-front {
+  font-weight: bold;
+}
+.card-back {
+  transform: rotateY(180deg);
+  text-align: center;
+  font-size: 14px;
+}
+
+#categories {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.category-btn {
+  padding: 10px 15px;
+  background-color: #f4d5ae;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.category-btn.active {
+  background-color: #ffb300;
+  color: #fff;
+}
+
+/* --- DÜZELTİLEN SLIDER CSS --- */
+.slider {
+  width: 100%;
+  overflow: hidden; /* Dışarıyı gizle */
+  padding: 20px 0;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  width: max-content; /* İçerik büzülmesin */
+  will-change: transform;
+}
+
+.slider .item {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- CONTACT & FOOTER --- */
+#contact {
+  padding: 60px 20px;
+  background-color: #f4d5ae;
+  text-align: center;
+}
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#contact-form input,
+#contact-form textarea {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+#contact-form button {
+  padding: 12px 20px;
+  background-color: #f6b463;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-social {
+  text-align: center;
+  margin-top: 20px;
+}
+.footer-social .icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+.footer-social .icons a {
+  font-size: 24px;
+  color: #333;
+  transition: 0.3s;
+}
+.since {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    align-items: center;
+  }
+  nav,
+  nav .menu,
+  #categories {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .slider .item {
+    width: 90px;
+    height: 90px;
+  }
+}

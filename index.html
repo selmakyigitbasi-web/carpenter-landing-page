@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Company</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Your Company</div>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#our-work">Our Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div class="hero-container">
+        <div class="hero-image">
+          <img src="carpenter.jpg" alt="Carpenter at work" />
+        </div>
+        <div class="hero-text">
+          <h1>We Build Custom Furniture With Passion</h1>
+          <p>
+            At Your Company, we craft high-quality furniture tailored to your
+            home and lifestyle.
+          </p>
+          <a href="#contact" class="btn">Get a Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service">
+          <div class="card-inner">
+            <div class="card-front"><h3>Kitchen Cabinets</h3></div>
+            <div class="card-back"><p>Modern and functional designs.</p></div>
+          </div>
+        </div>
+        <div class="service">
+          <div class="card-inner">
+            <div class="card-front"><h3>Wardrobes</h3></div>
+            <div class="card-back"><p>Stylish storage solutions.</p></div>
+          </div>
+        </div>
+        <div class="service">
+          <div class="card-inner">
+            <div class="card-front"><h3>Tables</h3></div>
+            <div class="card-back"><p>Unique tables built to match.</p></div>
+          </div>
+        </div>
+        <div class="service">
+          <div class="card-inner">
+            <div class="card-front"><h3>Storage Solutions</h3></div>
+            <div class="card-back">
+              <p>Smart furniture for organized living.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="our-work">
+      <h2>Our Work</h2>
+      <div id="categories">
+        <button class="category-btn active" data-filter="all">All</button>
+        <button class="category-btn" data-filter="kitchen">
+          Kitchen Cabinets
+        </button>
+        <button class="category-btn" data-filter="wardrobe">Wardrobes</button>
+        <button class="category-btn" data-filter="table">Tables</button>
+      </div>
+
+      <div class="slider">
+        <div class="slider-track">
+          <div class="item" data-category="kitchen">
+            <img src="kitchen1.jpg" />
+          </div>
+          <div class="item" data-category="kitchen">
+            <img src="kitchen2.jpg" />
+          </div>
+          <div class="item" data-category="kitchen">
+            <img src="kitchen3.jpg" />
+          </div>
+          <div class="item" data-category="kitchen">
+            <img src="kitchen4.jpg" />
+          </div>
+          <div class="item" data-category="kitchen">
+            <img src="kitchen5.jpg" />
+          </div>
+          <div class="item" data-category="kitchen">
+            <img src="kitchen6.jpg" />
+          </div>
+          <div class="item" data-category="kitchen">
+            <img src="kitchen7.jpg" />
+          </div>
+          <div class="item" data-category="kitchen">
+            <img src="kitchen8.jpg" />
+          </div>
+          <div class="item" data-category="kitchen">
+            <img src="kitchen9.jpg" />
+          </div>
+          <div class="item" data-category="table"><img src="table1.jpg" /></div>
+          <div class="item" data-category="table"><img src="table2.jpg" /></div>
+          <div class="item" data-category="table"><img src="table3.jpg" /></div>
+          <div class="item" data-category="table"><img src="table4.jpg" /></div>
+          <div class="item" data-category="table"><img src="table5.jpg" /></div>
+          <div class="item" data-category="table"><img src="table6.jpg" /></div>
+          <div class="item" data-category="wardrobe">
+            <img src="wardrobe1.jpg" />
+          </div>
+          <div class="item" data-category="wardrobe">
+            <img src="wardrobe2.jpg" />
+          </div>
+          <div class="item" data-category="wardrobe">
+            <img src="wardrobe3.jpg" />
+          </div>
+          <div class="item" data-category="wardrobe">
+            <img src="wardrobe4.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-container">
+        <form id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your Email" required />
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-social">
+        <div class="icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="since">Since 1995</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

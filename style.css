@@ -163,10 +163,9 @@ nav .menu li:hover {
   color: #fff;
 }
 
-/* --- DÜZELTİLEN SLIDER CSS --- */
 .slider {
   width: 100%;
-  overflow: hidden; /* Dışarıyı gizle */
+  overflow: hidden;
   padding: 20px 0;
   position: relative;
 }
@@ -174,7 +173,7 @@ nav .menu li:hover {
 .slider-track {
   display: flex;
   gap: 20px;
-  width: max-content; /* İçerik büzülmesin */
+  width: max-content;
   will-change: transform;
 }
 
@@ -192,7 +191,6 @@ nav .menu li:hover {
   object-fit: cover;
 }
 
-/* --- CONTACT & FOOTER --- */
 #contact {
   padding: 60px 20px;
   background-color: #f4d5ae;
@@ -242,7 +240,6 @@ nav .menu li:hover {
   color: #666;
 }
 
-/* 📱 RESPONSIVE */
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
